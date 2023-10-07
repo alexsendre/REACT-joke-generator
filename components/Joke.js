@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Joke({ joke }) {
+function Joke({ joke, btnText }) {
   return (
     <>
-      <h1>{joke.setup}</h1>
-      <h2>{joke.delivery}</h2>
+      <h1 className="mb-4">{joke.setup}</h1>
+      <p className="mb-5">{btnText !== 'Punchline' ? joke.delivery : ''}</p>
     </>
   );
 }
@@ -15,6 +15,7 @@ Joke.propTypes = {
     setup: PropTypes.string,
     delivery: PropTypes.string,
   }).isRequired,
+  btnText: PropTypes.string.isRequired,
 };
 
 export default Joke;
