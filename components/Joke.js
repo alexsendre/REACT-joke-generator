@@ -5,7 +5,7 @@ function Joke({ joke, btnText }) {
   return (
     <>
       <h1 className="mb-4">{joke.setup}</h1>
-      <p className="mb-5">{btnText !== 'Punchline' ? joke.delivery : ''}</p>
+      <p className="mb-5">{btnText !== 'Get Punchline' ? joke.delivery : ''}</p>
     </>
   );
 }

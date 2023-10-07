@@ -18,7 +18,7 @@ function Home() {
         delivery: obj.delivery,
       });
 
-      setButton('Punchline');
+      setButton('Get Punchline');
     });
   };
 
@@ -35,12 +35,12 @@ function Home() {
       }}
     >
       <Joke joke={joke} btnText={btnText} />
-      {btnText === 'Get a Joke' || btnText === 'New Joke?' ? (
+      {btnText === 'Get a Joke' || btnText === 'Get Another Joke' ? (
         <Button type="button" onClick={gatherJoke}>
           {btnText}
         </Button>
       ) : (
-        <Button type="button" onClick={() => setButton('New Joke?')}>
+        <Button type="button" onClick={() => setButton('Get Another Joke')}>
           {btnText}
         </Button>
       )}
